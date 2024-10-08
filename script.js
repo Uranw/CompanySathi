@@ -45,7 +45,7 @@ function loadingAnimation() {
     tl.from("#page1", {
         transform: "scaleX(0.7) scaleY(0.2) translateY(80%)",
         borderRadius: "150px",
-        duration: 2,
+        duration: 1,
         ease: "expo.out"
     })
     tl.from("nav", {
