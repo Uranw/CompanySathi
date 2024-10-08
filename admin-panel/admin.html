@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<h1>Admin Panel</h1>
+<table id="contacts-table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Message</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Contacts will be populated here -->
+    </tbody>
+</table>
+<div id="edit-modal" style="display:none;">
+    <h2>Edit Contact</h2>
+    <input type="hidden" id="edit-id">
+    <label for="edit-name">Name</label>
+    <input type="text" id="edit-name" required>
+
+    <label for="edit-email">Email</label>
+    <input type="email" id="edit-email" required>
+
+    <label for="edit-phone">Phone</label>
+    <input type="text" id="edit-phone" required>
+
+    <label for="edit-message">Message</label>
+    <textarea id="edit-message" required></textarea>
+
+    <button id="save-edit">Save</button>
+    <button id="cancel-edit">Cancel</button>
+</div>
+<script src="admin.js"></script>
+</body>
+</html>
