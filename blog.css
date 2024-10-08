@@ -1,0 +1,136 @@
+/* Base styles for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark background for contrast */
+    color: white; /* Text color */
+}
+
+/* Navbar styles */
+nav {
+    background: #111;
+    color: #fff;
+    padding: 15px;
+    position: sticky; /* Keeps the navbar at the top */
+    top: 0;
+    z-index: 1000; /* Ensures navbar stays above other elements */
+}
+
+nav h1 {
+    cursor: pointer;
+}
+
+.nav-part2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-elem h4 {
+    margin: 0;
+    cursor: pointer;
+}
+
+#contact-btn {
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Main content styles */
+#main {
+    padding: 35vw 20px 20px; /* Adjust padding for content */
+}
+
+/* Header styles */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styles */
+#main p {
+    font-size: 1rem; /* Size of the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Blog container styles */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 20px; /* Space between cards */
+    justify-content: flex-start; /* Align cards to the left */
+}
+
+/* Blog card styles */
+.blog-card {
+    flex: 0 1 calc(25% - 20px); /* Each card takes up 25% of the row width */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    background: #222; /* Slightly lighter than the main background */
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column; /* Align contents vertically */
+}
+
+/* Blog card image styles */
+.blog-card img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Blog card title styles */
+.blog-card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px; /* Margin for spacing */
+}
+
+/* Date styles */
+.date {
+    font-size: 0.9rem;
+    color: #aaa; /* Lighter color for the date */
+}
+
+/* Summary styles */
+.summary {
+    font-size: 0.9rem;
+    flex-grow: 1; /* Allow summary to take available space */
+}
+
+/* Read more button styles */
+.read-more-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007BFF;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #main{
+        
+        padding: 225% 0px 0px;
+    }
+    .blog-card {
+        
+        flex: 0 1 calc(50% - 20px); /* Two cards per row on tablets */
+    }
+    h1 {
+        font-size: 1.5rem; /* Smaller header on smaller screens */
+    }
+    #main p {
+        padding : auto;
+        font-size: 0.9rem; /* Smaller paragraph on smaller screens */
+    }
+}

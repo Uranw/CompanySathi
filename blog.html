@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Sathi - Blog</title>
+    <link rel="shortcut icon" href="https://assets-global.website-files.com/64a2ab71942e1d57feb6fe39/6528221f95333ff155d01ad2_fav.gif" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css"> <!-- Link to blog specific CSS -->
+</head>
+
+<body>
+    <nav>
+        <h1 id="company-sathi">COMPANY SATHI</h1>
+        <div class="nav-part2">
+            <div class="nav-elem"><h4 id="experience-page">Experience</h4></div>
+            <div class="nav-elem"><h4 id="video-page">Know Us</h4></div>
+            <div class="nav-elem"><h4 id="about-page">About Us</h4></div>
+            <div class="nav-elem"><h4 id="services-page">Services</h4></div>
+            <div class="nav-elem"><h4 id="blog-page">Blogs</h4></div>
+            <div class="nav-elem"><h4 id="location-page">Location</h4></div>
+        </div>
+        <button id="contact-btn">Contact Us 
+            <svg fill="none" viewBox="0 0 20 20">
+                <path fill="#fff" d="M2.5 14.375V17.5h3.125l9.217-9.217-3.125-3.125L2.5 14.375Zm14.758-8.508a.83.83 0 0 0 0-1.175l-1.95-1.95a.83.83 0 0 0-1.175 0l-1.525 1.525 3.125 3.125 1.525-1.525Z"></path>
+            </svg>
+        </button>
+    </nav>
+
+    <script>
+        document.getElementById("company-sathi").addEventListener("click", function() {
+            location.reload();
+        });
+
+        const navItems = [
+            { id: "experience-page", target: "index.html#page2" },
+            { id: "video-page", target: "index.html#page3" },
+            { id: "about-page", target: "index.html#page4" },
+            { id: "services-page", target: "index.html#page5" },
+            { id: "blog-page", target: "index.html#page6" },
+            { id: "location-page", target: "index.html#page7" }
+        ];
+
+        navItems.forEach(item => {
+            document.getElementById(item.id).addEventListener("click", function() {
+                window.location.href = item.target;
+            });
+        });
+
+        document.getElementById("contact-btn").addEventListener("click", function() {
+            window.location.href = "contact.html"; 
+        });
+    </script>
+
+<div id="main">
+    <div id="page1">
+        <h1>Our Blog</h1>
+        <p>Stay updated with our latest news, insights, and articles.</p>
+
+            <div class="blog-container">
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 1">
+                    <h2>Blog Post 1</h2>
+                    <p class="date">October 8, 2024</p>
+                    <p class="summary">This is a brief summary of blog post 1. It talks about exciting things related to our company...</p>
+                    <a href="post1.html" class="read-more-btn">Read More</a>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 2">
+                    <h2>Blog Post 2</h2>
+                    <p class="date">October 5, 2024</p>
+                    <p class="summary">In this article, we delve into the latest trends and news regarding our services...</p>
+                    <a href="post2.html" class="read-more-btn">Read More</a>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 3">
+                    <h2>Blog Post 3</h2>
+                    <p class="date">September 25, 2024</p>
+                    <p class="summary">This blog post discusses key strategies we are using to grow and help our clients succeed...</p>
+                    <a href="post3.html" class="read-more-btn">Read More</a>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 4">
+                    <h2>Blog Post 4</h2>
+                    <p class="date">September 20, 2024</p>
+                    <p class="summary">An overview of the latest developments in our company...</p>
+                    <a href="post4.html" class="read-more-btn">Read More</a>
+                </div>
+
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5">
+                    <h2>Blog Post 5</h2>
+                    <p class="date">September 15, 2024</p>
+                    <p class="summary">Insights into our company's future projects and goals...</p>
+                    <a href="post5.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5">
+                    <h2>Blog Post 5</h2>
+                    <p class="date">September 15, 2024</p>
+                    <p class="summary">Insights into our company's future projects and goals...</p>
+                    <a href="post5.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5">
+                    <h2>Blog Post 5</h2>
+                    <p class="date">September 15, 2024</p>
+                    <p class="summary">Insights into our company's future projects and goals...</p>
+                    <a href="post5.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5">
+                    <h2>Blog Post 5</h2>
+                    <p class="date">September 15, 2024</p>
+                    <p class="summary">Insights into our company's future projects and goals...</p>
+                    <a href="post5.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5">
+                    <h2>Blog Post 5</h2>
+                    <p class="date">September 15, 2024</p>
+                    <p class="summary">Insights into our company's future projects and goals...</p>
+                    <a href="post5.html" class="read-more-btn">Read More</a>
+                </div>
+                <div class="blog-card">
+                    <img src="https://via.placeholder.com/300" alt="Blog Post 5">
+                    <h2>Blog Post 5</h2>
+                    <p class="date">September 15, 2024</p>
+                    <p class="summary">Insights into our company's future projects and goals...</p>
+                    <a href="post5.html" class="read-more-btn">Read More</a>
+                </div>
+            </div>
+        
+    </div>
+</body>
+
+</html>

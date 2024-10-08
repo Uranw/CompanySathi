@@ -651,6 +651,7 @@ summary::marker {
     gap: 20px;
     width: 100%;
     padding-left: 50px;
+    
 }
 
 .blog-card {
@@ -660,6 +661,9 @@ summary::marker {
     text-align: center;
 
     transition: transform 0.3s;
+
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Makes the link color the same as the surrounding text */
 }
 
 .blog-card:hover {
@@ -882,17 +886,23 @@ button:hover {
     font-family: 'FontAwesome';
 }
 
-/* Specific Icons */
-.icon-phone2:before {
+ /* Specific Icons */
+ .icon-phone2:before {
     content: '\f095'; /* Phone icon */
 }
-
 .icon-paper-plane:before {
     content: '\f1d8'; /* Paper plane icon */
 }
-
 .icon-globe:before {
     content: '\f0ac'; /* Globe icon */
+}
+
+/* General icon styling */
+.icon-phone2, .icon-paper-plane, .icon-globe {
+    font-family: 'Font Awesome 5 Free'; /* Font Awesome's font family */
+    font-weight: 900; /* Solid icons */
+    font-size: 24px;
+    margin-right: 10px;
 }
 
 /* Text Centering and Spacing */
@@ -920,35 +930,399 @@ a:hover {
     text-decoration: underline;
 }
 
+
+
 /* Responsive Design */
+/* Mobile styles for screens less than 768px wide */
+/* Mobile view adjustments for screens smaller than 768px */
 @media (max-width: 768px) {
-    .col-md-6,
-    .col-lg-3 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
+
+    
+    nav h1
+    {
+     
+        font-size: 3vw;
     }
+    .nav-elem h4 {
+        font-size: 2vw; /* Larger font size for mobile view */
+    }
+    #contact-btn {
+        position: absolute; /* or fixed, relative, depending on your needs */
+        bottom: 20px; /* Position it 20px from the bottom */
+        right: 20px; /* Position it 20px from the right */
+        z-index: 1000; /* Ensure it's above other elements if needed */
+        font-size: 2vw; /* Increase font size for mobile */
+    }
+
+
+
+      /* Add logo behind the company name */
+      .company-name {
+        position: relative; /* Set position relative to place the logo behind */
+        font-size: 8vw; /* Adjust font size for mobile */
+        z-index: 1; /* Ensure the text appears above the logo */
+      }
+    
+      .company-name::before {
+        content: url('path-to-your-logo.png'); /* Add your logo URL here */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Center the logo behind the text */
+        width: 40vw; /* Set width as a percentage of the viewport width */
+        height: auto; /* Maintain aspect ratio */
+        opacity: 0.2; /* Make the logo slightly transparent */
+        z-index: -1; /* Ensure the logo is behind the text */
+      }
+
+  
+    #page1 h1 {
+      font-size: 10vw; /* Adjust large text for smaller screens */
+    }
+  
+    #page1 p {
+      font-size: 4vw;
+    }
+    #page1-something h4{
+        font-size: 3vw;
+    }
+    /* Make images responsive */
+    img, video {
+      width: 100%;
+      height: auto;
+    }
+  
+    #page2-left, #page2-right {
+        width: 100%; /* Ensure it takes the full width */
+        box-sizing: border-box; /* Include padding/border in width */
+      font-size: 2vw;
+    }
+    #page2 h2{
+        font-size: 2.5vw;
+    }
+    
+    #page2-left p, #page2-left h5 {
+      font-size: 5vw;
+      
+    }
+  
+    #page3 {
+        background-color: #111; /* Background color for page 3 */
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    #page3 video {
+        width: 100%; /* Full width for video */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the entire area */
+    }
+
+    .page3-center {
+        position: absolute;
+        bottom: 10%; /* Position near the bottom */
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        text-align: center; /* Center text */
+    }
+
+    .page3-center .icon {
+        background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        border-radius: 50%; /* Circular icon */
+        padding: 15px; /* Padding for icon */
+    }
+
+    .page3-center h5 {
+        font-size: 5vw; /* Responsive font size */
+        color: #fff; /* Text color */
+        margin-top: 10px; /* Space above */
+    }
+
+    /* Page 4 adjustments */
+    #page4 {
+        background-color: #fff; /* Background color for page 4 */
+        padding: 20px; /* Padding for page content */
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .sec-left {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 1px; /* Reduce margin below */
+        padding-top: 1px; /* Add some padding above to create space */
+    }
+
+    .sec-left h2 {
+        font-size: 6vw; /* Responsive font size */
+        margin-top: 0; /* Ensure no top margin */
+    }
+
+    .sec-left p {
+        font-size: 4vw; /* Responsive font size */
+    }
+
+    .sec-right {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 20px; /* Space between sections */
+    }
+
+    .sec-right img {
+        width: 100%; /* Full width for image */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .sec-right video {
+        width: 100%; /* Full width for video */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+  
+
+    
+    #page5-right {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    #page5-right p {
+        font-size: 4vw; /* Responsive font size */
+    }
+
+    #page5-content {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    #page5 h1{
+        font-size: 8vw;
+    }
+    .uiux {
+        
+        margin-top: 10px; /* Margin above the services section */
+    }
+
+    details summary {
+        cursor: pointer; /* Change cursor to pointer */
+        font-size: 5vw; /* Responsive font size for summary */
+        padding: 10px; /* Padding for clickable area */
+        background-color: #111; /* Light background for the summary */
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #1111; /* Border around the summary */
+    }
+
+    #flex {
+        display: flex;
+        flex-wrap: wrap; /* Allow wrapping of items */
+        justify-content: space-between; /* Space between items */
+        margin: 10px 0; /* Margin above and below the flex items */
+    }
+
+    #flex h4 {
+        font-size: 4vw; /* Responsive font size for service headings */
+        flex: 1 1 calc(50% - 10px); /* 2 items per row with spacing */
+        margin: 5px; /* Margin around each service item */
+    }
+
+    /* Page elements */
+    #page-container {
+        margin-top: 15px; /* Space above the page container */
+    }
+
+    .page5-elem {
+        border: 1px solid #ddd; /* Border around each service */
+        padding: 15px; /* Padding inside each service */
+        margin-bottom: 10px; /* Space below each service */
+        border-radius: 5px; /* Rounded corners */
+        position: relative; /* For absolutely positioned elements inside */
+    }
+
+    .page5-elem h3 {
+        font-size: 4vw; /* Responsive font size for service titles */
+        margin-bottom: 10px; /* Space below the title */
+        padding: 2vw;
+    }
+
+    .page5-elem p {
+        font-size: 3vw; /* Responsive font size for service descriptions */
+        margin-bottom: 10px; /* Space below the description */
+        padding: 2vw;
+        font-style: normal;
+    }
+
+    .ri-arrow-right-up-line {
+        position: absolute; /* Position the icon */
+        right: 10px; /* Align to the right */
+        bottom: 10px; /* Align to the bottom */
+        font-size: 3vw; /* Responsive font size for icon */
+    }
+  
+
+    
+    /* Flex container adjustments for mobile */
+    #page6 {
+        padding: 20px; /* Reduced padding for mobile */
+    }
+
+    #page6 h1 {
+        font-size: 2rem; /* Responsive font size for heading */
+    }
+
+    #blue-btn {
+        margin-top: 20px; /* Ensure space above the button on mobile */
+    }
+    
+    /* Move button to bottom of the page6-content on mobile */
+    #page6-content {
+        display: flex;
+        flex-direction: column; /* Stack items in a column */
+    }
+
+    #right-6 {
+        order: 1; /* Ensure blogs come first */
+    }
+
+   /* Button Styles */
+#blue-btn {
+    background-color: #4f5bff; /* Button color */
+    padding: 10px 15px; /* Smaller padding for size */
+    border-radius: 20px; /* Slightly smaller border radius */
+    margin-top: 20px; /* Space above the button */
+    text-align: center; /* Center the button */
+}
+
+#blue-btn a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    display: flex; /* Flex for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 3.5vw; /* Responsive, smaller font size */
+}
+
+#blue-btn a:hover {
+    background-color: #3e4bb1; /* Darker shade on hover */
 }
 
 
-
-
-
-
-
-
-
-
-
-@media (max-width: 768px) {
+    /* Adjust blog container for mobile view */
     .blogs-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack blog cards vertically on mobile */
+        gap: 10px; /* Space between blog cards */
     }
 
     .blog-card {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%; /* Full width for blog cards on mobile */
+        margin-bottom: 20px; /* Space below each blog card */
+    }
+
+    .blog-card h3 {
+        font-size: 1.1rem; /* Smaller font size for mobile titles */
+    }
+
+    .blog-card p {
+        font-size: 0.8rem; /* Smaller font size for mobile descriptions */
+    }
+  
+   
+
+    #page7 {
+        height: auto;
+        padding: 20px; /* Reduced padding for mobile */
+    }
+    
+    #footer {
+        background-color: #111; /* Background color for footer */
+        padding: 20px; /* Padding for footer */
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        gap: 20px; /* Space between sections */
+    }
+    
+    /* Map Container */
+    .map-container {
+        width: 100%; /* Full width for mobile */
+    }
+    
+    .map-container h3 {
+        font-size: 1.5rem; /* Responsive font size for heading */
+    }
+    
+    /* Responsive Iframe */
+    .map-container iframe {
+        width: 100%; /* Full width for mobile */
+        height: 200px; /* Height adjusted for mobile */
+        border: 0; /* No border */
+    }
+    
+    /* Form Container */
+    .form-container {
+        width: 100%; /* Full width for mobile */
+    }
+    
+    .form-container h3 {
+        font-size: 1.5rem; /* Responsive font size for heading */
+    }
+    
+    .form-container label {
+        font-size: 1rem; /* Font size for labels */
+    }
+    
+    .form-container input,
+    .form-container textarea {
+        width: 100%; /* Full width inputs */
+        padding: 10px; /* Padding for inputs */
+        margin-bottom: 15px; /* Space below each input */
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #111; /* Border style */
+    }
+    
+    /* Button Styles */
+    .form-container button {
+        width: 100%; /* Full width for button */
+        padding: 12px; /* Padding for button */
+        background-color: #4f5bff; /* Button color */
+        color: white; /* Text color */
+        border: none; /* No border */
+        border-radius: 5px; /* Rounded corners */
+        font-size: 1rem; /* Responsive font size */
+        cursor: pointer; /* Pointer cursor on hover */
+    }
+    
+    .form-container button:hover {
+        background-color: #3e4bb1; /* Darker shade on hover */
+    }
+    
+    /* Contact Info Section */
+    .row {
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Stack vertically on mobile */
+        gap: 20px; /* Space between contact info boxes */
+    }
+    
+    /* Adjust order for mobile view */
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column; /* Stack items vertically for mobile */
+        }
+    
+        /* Move location above the form */
+        .map-container {
+            order: 1; /* Make location section first */
+        }
+    
+        .form-container {
+            order: 2; /* Make form section second */
+        }
+    
+        /* Maintain the rest of the mobile styles */
+        #blue-btn {
+            margin-top: 20px; /* Ensure space above the button on mobile */
+        }
+        
+        /* Additional styles as needed */
     }
 }
-

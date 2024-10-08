@@ -8,8 +8,11 @@
 </head>
 <body>
 
+    <button id="getBackButton" class="get-back">Get Back</button>
+
     <!-- Header Section -->
     <section class="contact-header">
+        <h1><a href="index.html">COMPANY SATHI</a></h1>
         <h1>Get In Touch</h1>
         <p>We’d love to hear from you! Fill out the form and we’ll get back to you.</p>
     </section>
@@ -39,10 +42,13 @@
         </form>
     </div>
 
+
+
     <!-- Location Section -->
     <div class="location">
         <h2>Our Location</h2>
         <p>Gaurav Marg 11, Baneshwor, Kathmandu 44600, Nepal</p>
+        <p>+977-9851235244</p>
         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.562771092255!2d85.3185698!3d27.6940783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb194461d48c25%3A0x3b0443806f759db0!2sCompany%20Sathi!5e0!3m2!1sen!2snp!4v1633018782657!5m2!1sen!2snp"
                             width="600"
@@ -51,6 +57,14 @@
                             allowfullscreen=""
                             loading="lazy"></iframe>    
     </div>
+
+    <script>
+    document.getElementById('getBackButton').onclick = function() {
+        window.history.back();
+    };
+    </script>
+    
+
 </section>
 
 

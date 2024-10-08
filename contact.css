@@ -124,3 +124,141 @@ button[type="submit"]:hover {
     border-radius: 10px;
     border: 0;
 }
+
+/* Get Back Button */
+#getBackButton {
+    position: fixed; /* Fixed position to stay in the corner */
+    top: 20px; /* Distance from the top */
+    left: 20px; /* Distance from the left */
+    background-color: #007BFF; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Button padding */
+    font-size: 1rem; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1000; /* High z-index to ensure it's on top */
+    display: none; /* Initially hidden */
+}
+
+/* Show the button only on mobile view */
+@media (max-width: 768px) {
+    #getBackButton {
+        display: block; /* Show the button on mobile */
+    }
+}
+
+
+/*MOBILE VIEW*/
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    padding: 20px;
+}
+
+h1, h2 {
+    padding-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Contact Form and Location Section */
+.form-location {
+    display: flex;
+    flex-wrap: wrap; /* Allow form and location to wrap on smaller screens */
+    gap: 20px; /* Space between form and location */
+    justify-content: space-between;
+}
+
+.contact-form,
+.location {
+    flex: 1; /* Each section takes equal space */
+    min-width: 300px; /* Minimum width to prevent shrinking too much */
+}
+
+/* Contact Form */
+.contact-form form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    gap: 15px; /* Space between form elements */
+}
+
+.form-group label {
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Full width inputs */
+}
+
+button {
+    padding: 12px;
+    font-size: 1.1rem;
+    background-color: #4f5bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3e4bb1;
+}
+
+/* Location Section */
+.location iframe {
+    width: 100%; /* Full width for map */
+    height: auto; /* Adjust height automatically */
+    border: none;
+}
+
+h1 a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color of the heading */
+}
+
+h1 a:hover {
+    color: #4f5bff; /* Add hover effect if needed */
+}
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .form-location {
+        flex-direction: column; /* Stack form and location vertically */
+        gap: 30px; /* Space between form and location */
+    }
+
+    .contact-form,
+    .location {
+        width: 100%; /* Full width for both form and location */
+    }
+
+    iframe {
+        height: 300px; /* Adjust iframe height for mobile */
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Reduce heading size for mobile */
+    }
+
+    p {
+        font-size: 1rem; /* Reduce paragraph size */
+    }
+}
