@@ -92,36 +92,45 @@ nav button svg {
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
     justify-content: space-between; /* Space out text and image */
     align-items: flex-start; /* Align items to the start */
-    margin: 20px; /* Margin around the page */
+    margin: 0px; /* Margin around the page */
+    padding-top: 3%;
 }
 
 #page2 h2 {
     flex-basis: 100%; /* Take full width on smaller screens */
-    margin-bottom: 1rem; /* Space below headings */
+    margin-bottom: 5rem; /* Space below headings */
+    font-size: 250%;
 }
 
 #page2 p {
     flex-basis: 45%; /* Adjust text width */
     margin-right: 20px; /* Space between text and image */
-}
-
-#page2 img {
-    flex-basis: 45%; /* Adjust image width */
-    max-width: 100%; /* Ensure responsive images */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: auto; /* Align images to the right */
-    order: 2; /* Position the image to the right */
+    font-size: 120%;
 }
 
 .text-container {
     flex-basis: 45%; /* Adjust text width */
     order: 1; /* Position the text to the left */
+    font-weight: 500;
+}
+
+/* Image styles */
+.img-fluid {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the image container */
+.img-container {
+    flex-basis: 45%; /* Adjust image width */
+    margin-top: 1rem; /* Add space above images */
+    order: 2; /* Position the image to the right */
 }
 
 /* Tag widget styles */
 .tag-widget {
     flex-basis: 100%; /* Full width for the tags */
-    margin-top: 2rem; /* Space above the tag widget */
+    margin-top: 5rem; /* Space above the tag widget */
 }
 
 .tag-cloud-link {
@@ -137,6 +146,11 @@ nav button svg {
     background-color: #0056b3; /* Darker blue on hover */
 }
 
+.tag-widget {
+    margin-top: 2rem; /* Add margin above the tag widget */
+}
+
+
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
     #page1 h1 {
@@ -149,18 +163,12 @@ nav button svg {
 
     #page2 {
         flex-direction: column; /* Stack text and images vertically */
-        padding: 5vh 5vw;
+        padding: 5vh 5vw; /* Add padding */
     }
 
     #page2 p {
         margin-right: 0; /* Remove margin for stacked layout */
         margin-bottom: 1rem; /* Add space below paragraphs */
-    }
-
-    #page2 img {
-        margin-left: 0; /* Remove left margin for images */
-        margin-top: 1rem; /* Add space above images */
-        flex-basis: 100%; /* Allow images to take full width */
     }
 
     /* Additional styles for header and paragraph text */
