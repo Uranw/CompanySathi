@@ -1,0 +1,174 @@
+/* Base styles for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* Dark background for contrast */
+    color: white; /* Text color */
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    height: 12vh;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    background-color: #111;
+    z-index: 10;
+}
+
+nav h1 {
+    font-size: 1.6vw;
+}
+
+.nav-part2 {
+    display: flex;
+    gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-part2 h4 {
+    font-size: 0.73vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2.6vw;
+}
+
+nav button {
+    background-color: #4f5bff;
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    border: none;
+}
+
+nav button svg {
+    height: 0.8vw;
+    margin-left: 1.6vw;
+}
+
+/* Main content styles */
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styles */
+#page1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Centers content vertically */
+    text-align: center; /* Centers content horizontally */
+}
+
+#page1 h1 {
+    font-size: 6.5vw;
+    text-transform: uppercase;
+    font-weight: 200;
+    line-height: 1.2; /* Adjust line height for spacing */
+}
+
+#page1 p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-top: 3vh;
+    font-size: 1.3vw;
+}
+
+/* Styles for Page 2 */
+#page2 {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between; /* Space out text and image */
+    align-items: flex-start; /* Align items to the start */
+    margin: 20px; /* Margin around the page */
+}
+
+#page2 h2 {
+    flex-basis: 100%; /* Take full width on smaller screens */
+    margin-bottom: 1rem; /* Space below headings */
+}
+
+#page2 p {
+    flex-basis: 45%; /* Adjust text width */
+    margin-right: 20px; /* Space between text and image */
+}
+
+#page2 img {
+    flex-basis: 45%; /* Adjust image width */
+    max-width: 100%; /* Ensure responsive images */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto; /* Align images to the right */
+    order: 2; /* Position the image to the right */
+}
+
+.text-container {
+    flex-basis: 45%; /* Adjust text width */
+    order: 1; /* Position the text to the left */
+}
+
+/* Tag widget styles */
+.tag-widget {
+    flex-basis: 100%; /* Full width for the tags */
+    margin-top: 2rem; /* Space above the tag widget */
+}
+
+.tag-cloud-link {
+    background-color: #007bff; /* Example background color for tags */
+    color: #fff; /* Text color */
+    padding: 5px 10px; /* Padding around tag text */
+    border-radius: 5px; /* Rounded corners */
+    margin-right: 10px; /* Space between tags */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.tag-cloud-link:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #page1 h1 {
+        font-size: 1.5rem; /* Smaller header on smaller screens */
+    }
+
+    #page1 p {
+        font-size: 0.9rem; /* Smaller paragraph on smaller screens */
+    }
+
+    #page2 {
+        flex-direction: column; /* Stack text and images vertically */
+        padding: 5vh 5vw;
+    }
+
+    #page2 p {
+        margin-right: 0; /* Remove margin for stacked layout */
+        margin-bottom: 1rem; /* Add space below paragraphs */
+    }
+
+    #page2 img {
+        margin-left: 0; /* Remove left margin for images */
+        margin-top: 1rem; /* Add space above images */
+        flex-basis: 100%; /* Allow images to take full width */
+    }
+
+    /* Additional styles for header and paragraph text */
+    #page2 h2 {
+        font-size: 1.5rem; /* Adjust h2 size */
+    }
+
+    #page2 p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+}
