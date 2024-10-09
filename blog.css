@@ -7,43 +7,84 @@ body {
     color: white; /* Text color */
 }
 
-/* Navbar styles */
 nav {
-    background: #111;
-    color: #fff;
-    padding: 15px;
-    position: sticky; /* Keeps the navbar at the top */
-    top: 0;
-    z-index: 1000; /* Ensures navbar stays above other elements */
+    position: fixed;
+    /* background-color: rgb(0, 255, 68); */
+    display: flex;
+    align-items: flex-start;
+    height: 12vh;
+    width: 100%;
+    padding: 2vw 10.4vw;
+    justify-content: space-between;
+    background-color: #111;
+    z-index: 10;
 }
 
 nav h1 {
-    cursor: pointer;
+    font-size: 1.6vw;
 }
 
 .nav-part2 {
     display: flex;
-    justify-content: space-around;
+    gap: 2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-part2 h4 {
+    font-size: 0.73vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 2.6vw;
+}
+
+.nav-part2 h5 {
+    margin-bottom: 1vw;
+    /* background-color: red; */
+    display: none;
+    overflow: hidden;
+}
+
+.nav-part2 h5 span {
+    font-size: 0.77vw;
+    font-weight: 400;
+    transform: translateY(25px);
+    display: inline-block;
+}
+
+nav button {
+    background-color: #4f5bff;
+    display: flex;
     align-items: center;
-}
-
-.nav-elem h4 {
-    margin: 0;
-    cursor: pointer;
-}
-
-#contact-btn {
-    background: #007BFF;
-    color: white;
+    padding: 14px 20px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
+}
+
+nav button svg {
+    height: 0.8vw;
+    margin-left: 1.6vw;
+}
+
+#nav-bottom {
+    width: 79%;
+    height: 0vh;
+    position: absolute;
+    /* background-color: red; */
+    top: 100%;
+    background-color: #111;
+    z-index: 9;
+    border-bottom: 1px solid #fff;
 }
 
 /* Main content styles */
 #main {
-    padding: 35vw 20px 20px; /* Adjust padding for content */
+    padding: 40vw 20px 20px; /* Adjust padding for content */
 }
 
 /* Header styles */
