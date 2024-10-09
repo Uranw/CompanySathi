@@ -228,16 +228,16 @@ nav button svg {
 
 
 #page2-left {
-    min-height: 100%;
+    margin-top: -20%;
     width: 40%;
-    gap: 10vw;
+    gap: 8vw;
     /* background-color: #333; */
     display: flex;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    padding: 3vw 0;
+    padding: 1vw 0;
 }
 
 #page2-left p {
@@ -255,6 +255,13 @@ nav button svg {
     height: 100%;
     width: 50%;
     /* background-color: #333; */
+}
+
+#page2-right h3 {
+    font-family: poppins;
+    font-weight: 500;
+    font-size: 130%;
+    padding-top: 2%;
 }
 
 .right-elem {

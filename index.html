@@ -144,19 +144,19 @@
             </div>
             <div id="page2-right">
                 <div class="right-elem" id="right-elem1">
-                    <h2>10+ YEARS <br>REGISTRATION OF COMPANY<h3>"Over 10 years of expertise in seamless company registration, guiding businesses through every step with precision and professionalism at Company Sathi."</h3></h2>
+                    <h2>10+ YEARS <br>REGISTRATION OF COMPANY<h3>Over 10 years of expertise in seamless company registration, guiding businesses through every step with precision and professionalism at Company Sathi.</h3></h2>
                     
                 </div>
                 <div class="right-elem">
-                    <h2>25+ YEARS <br>Accounting & Internal Controls<h3>"Company Sathi ensures rigorous accounting and internal controls, safeguarding your business with meticulous oversight and compliance."</h3></h2>
+                    <h2>25+ YEARS <br>Accounting & Internal Controls<h3>Company Sathi ensures rigorous accounting and internal controls, safeguarding your business with meticulous oversight and compliance.</h3></h2>
                     
                 </div>
                 <div class="right-elem">
-                    <h2>20+ YEARS<br>ACCOUNTING AND TAXATION<h3>"With over 20 years of experience in accounting and taxation, Company Sathi provides expert financial management and compliance services."</h3></h2>
+                    <h2>20+ YEARS<br>ACCOUNTING AND TAXATION<h3>With over 20 years of experience in accounting and taxation, Company Sathi provides expert financial management and compliance services.</h3></h2>
                     
                 </div>
                 <div class="right-elem">
-                    <h2>20+ YEARS<br>Financial Reporting & Analysis <h3>"Company Sathi excels in financial reporting and analysis, delivering precise insights to drive informed business decisions."</h3></h2>
+                    <h2>20+ YEARS<br>Financial Reporting & Analysis <h3>Company Sathi excels in financial reporting and analysis, delivering precise insights to drive informed business decisions.</h3></h2>
                     
                 </div>
             </div>
@@ -328,7 +328,6 @@
         </div>
         
         <div id="page7">
-            
             <div id="footer">
                 <div class="footer-container">
                     <div class="map-container">
@@ -341,124 +340,113 @@
                             allowfullscreen=""
                             loading="lazy"></iframe>
                     </div>
-
+        
                     <div class="form-container">
                         <h3>Get in Touch</h3>
-                        <form id="contact-form"> <!-- No action attribute needed -->
+                        <form id="contact-form">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
-
+        
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required>
-
+        
                             <label for="phone">Phone Number</label>
                             <input type="text" id="phone" name="phone" required>
-
+        
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="4" required></textarea>
-
+        
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
-
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function() {
-                            const form = document.getElementById('contact-form');
-                            form.addEventListener('submit', async (e) => {
-                                e.preventDefault(); // Prevent default form submission
-                                console.log('Form submitted!'); // Debugging log to confirm the form is being submitted
-
-                                const formData = {
-                                    name: document.getElementById('name').value,
-                                    email: document.getElementById('email').value,
-                                    phone: document.getElementById('phone').value,
-                                    message: document.getElementById('message').value,
-                                };
-
-                                console.log('Form data:', formData); // Debugging to check form data before sending
-
-                                try {
-                                    const response = await fetch('/submit', {
-                                        method: 'POST',
-                                        headers: {
-                                            'Content-Type': 'application/json',
-                                        },
-                                        body: JSON.stringify(formData),
-                                    });
-
-                                    if (response.ok) {
-                                        const data = await response.json();
-                                        alert(data.message); // Display success message
-                                        // Clear form fields after the alert
-                                        document.getElementById('name').value = '';
-                                        document.getElementById('email').value = '';
-                                        document.getElementById('phone').value = '';
-                                        document.getElementById('message').value = '';
-                                    } else {
-                                        console.error('Form submission failed:', response.status, response.statusText);
-                                        alert('Error submitting form');
-                                    }
-                                } catch (error) {
-                                    console.error('Error:', error);
-                                    alert('Error submitting form');
-                                }
-                            });
-                        });
-                    </script>
-
-
                 </div>
-
+    
                 <div class="row d-flex contact-info mb-5">
-                    <!-- Address Section -->
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
                         <div class="box p-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center">
-                                <i class="fas fa-map-signs"></i> <!-- Correct Font Awesome icon class -->
+                                <i class="fas fa-map-signs"></i>
                             </div>
                             <h3 class="mb-4">Address</h3>
                             <p>Gaurav Marg 11, Baneshwor, Kathmandu 44600, Nepal</p>
                         </div>
                     </div>
-                
-                    <!-- Contact Number Section -->
+                    
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
                         <div class="box p-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center">
-                                <i class="fas fa-phone-alt"></i> <!-- Correct Font Awesome icon class -->
+                                <i class="fas fa-phone-alt"></i>
                             </div>
                             <h3 class="mb-4">Contact Number</h3>
                             <p><a href="tel:+9779851235244">+977-9851235244</a></p>
                         </div>
                     </div>
-                
-                    <!-- Email Section -->
+                    
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
                         <div class="box p-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center">
-                                <i class="fas fa-paper-plane"></i> <!-- Correct Font Awesome icon class -->
+                                <i class="fas fa-paper-plane"></i>
                             </div>
                             <h3 class="mb-4">Email Address</h3>
                             <p><a href="mailto:companysathi99@gmail.com">companysathi99@gmail.com</a></p>
                         </div>
                     </div>
-                
-                    <!-- Website Section -->
+                    
                     <div class="col-md-6 col-lg-3 d-flex align-items-stretch">
                         <div class="box p-4 text-center">
                             <div class="icon d-flex align-items-center justify-content-center">
-                                <i class="fas fa-globe"></i> <!-- Correct Font Awesome icon class -->
+                                <i class="fas fa-globe"></i>
                             </div>
                             <h3 class="mb-4">Website</h3>
                             <p><a href="https://companysathi.com" target="_blank">companysathi.com</a></p>
                         </div>
                     </div>
                 </div>
-            </div>        
-          
-                        
+            </div>
+    
+            <div id="footer">
+                <p class="footer-text">Copyright ©2024 All rights reserved | CompanySathi</p>
+            </div>
         </div>
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('contact-form');
+                form.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+    
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        email: document.getElementById('email').value,
+                        phone: document.getElementById('phone').value,
+                        message: document.getElementById('message').value,
+                    };
+    
+                    try {
+                        const response = await fetch('/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(formData),
+                        });
+    
+                        if (response.ok) {
+                            const data = await response.json();
+                            alert(data.message);
+                            document.getElementById('contact-form').reset(); // Reset form fields
+                        } else {
+                            alert('Error submitting form');
+                        }
+                    } catch (error) {
+                        alert('Error submitting form');
+                    }
+                });
+            });
+        </script>       
     </div>
+   
+    
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
